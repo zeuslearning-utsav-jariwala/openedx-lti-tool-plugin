@@ -136,7 +136,7 @@ edx-drf-extensions==10.3.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-edx-opaque-keys==2.3.0
+edx-opaque-keys==3.0.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
