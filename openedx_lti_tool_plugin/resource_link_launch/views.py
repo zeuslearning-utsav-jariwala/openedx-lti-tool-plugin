@@ -510,7 +510,8 @@ class ResourceLinkLaunchView(LTIToolView):
                     check_access=True,
                 )
         except course_enrollment_exception() as exc:
-            raise ResourceLinkException(_(f'Course enrollment failed: {exc}')) from exc
+            log.error(f"Course enrollment failed: {exc}", exc_info=True)
+            raise ResourceLinkException(_(f'Course enrollment failed: {repr(exc)}')) from exc
 
     def get_launch_response(
         self,
